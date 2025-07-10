@@ -48,14 +48,14 @@ git lfs install
 
 Below is a step-by-step workflow and description of each script:
 
-# fetch_market_data.py
+### fetch_market_data.py
 Description:
 Downloads historical SPY and VIX price data via Yahoo Finance and saves CSVs in ./data/raw/.
 
 Run:
 python fetch_market_data.py
 
-# fetch_sentiment_data.py
+### fetch_sentiment_data.py
 Description:
 Fetches:
 
@@ -68,7 +68,7 @@ Saves raw data and cleaned AAII CSVs.
 Run:
 python fetch_sentiment_data.py
 
-# generate_features.py
+### generate_features.py
 Description:
 
 Loads price data, COT data, and sentiment data
