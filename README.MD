@@ -135,11 +135,11 @@ python visualize_signals.py --start 2024-01-01 --end 2025-07-10
 
 ## Recommended Workflow
 
-1  Fetch raw market and sentiment data
-2  Generate features
-3  Train the model
-4  Predict signals
-5  Explore signals via CLI and visualization
+1  Fetch raw market and sentiment data  
+2  Generate features  
+3  Train the model  
+4  Predict signals  
+5  Explore signals via CLI and visualization  
 
 
 ## Functional Description
