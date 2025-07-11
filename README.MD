@@ -132,6 +132,80 @@ python visualize_signals.py --start YYYY-MM-DD --end YYYY-MM-DD
 Example:
 python visualize_signals.py --start 2024-01-01 --end 2025-07-10
 
+### backtest.py  
+  
+Description:  
+evaluates the performance of generated signals over  
+historical data to simulate trading outcomes. 
+It calculates metrics such as:
+
+Total number of trades  
+Number of profitable trades  
+Average return per trade  
+Cumulative return over the dataset
+
+Run:  
+python3 backtest.py  
+  
+Output:  
+Prints a summary of the backtest to teh console
+Saves detailed per-trade results as a CSV in teh signals/ directory with a timestamped filename  
+./signals/backtest_results_YYYYMMDD_HHMMSS.csv  
+
+Notes:  
+Returns are calculated based on simulated daily percentage changes.  
+This is a basic backtest, not accounting for commissions, slippage, or position sizing.    
+Use this to validate that the model’s predictions have predictive power before deploying for live trading.  
+
+Example Output:  
+📈 Backtest Summary:  
+Total trades: 9303  
+Profitable trades: 1056 (11.35%)  
+Average return per trade: 0.03%  
+Cumulative return: 1283.48%  
+
+### run_all.py  
+
+Description:  
+automates the end-to-end pipeline, running all scripts in order without manually executing them one by one.  
+This script:  
+1 Fetches raw market and sentiment data.  
+2 Generates processed feature datasets.  
+3 Trains the model.  
+4 Predicts trading signals.  
+5 Backtests the signals.  
+6 Optionally visualizes signals for a date range.  
+
+How to Run:  
+python3 run_all.py  
+
+Interactive Prompts:  
+At the end, it will ask:  
+Whether you want to visualize signals (y/n).  
+Start and end dates to focus the visualization (or leave blank for all data).
+  
+Outputs:  
+  
+Timestamped raw and processed data files.  
+Trained model saved in models/.  
+Signals CSV file in signals/.  
+Backtest results CSV in signals/.  
+Visualization window (if selected).  
+
+Notes:  
+Ideal for quickly testing the full workflow with fresh data.  
+All logs and progress messages are printed to the console.  
+Future improvements could include config files for more automation.  
+
+Example Workflow:  
+python3 run_all.py 
+  
+You'll see:  
+🚀 Running: fetch_market_data.py  
+✅ fetch_market_data.py completed successfully.  
+...  
+🎨 Do you want to visualize the signals? (y/n): y  
+
 
 ## Recommended Workflow
 
