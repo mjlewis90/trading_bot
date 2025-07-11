@@ -52,7 +52,7 @@ Below is a step-by-step workflow and description of each script:
 
 ### fetch_market_data.py
 
-Description:
+Description:  
 Downloads historical SPY and VIX price data via Yahoo Finance and saves CSVs in ./data/raw/.
 
 Run:
@@ -60,7 +60,7 @@ python fetch_market_data.py
 
 ### fetch_sentiment_data.py
 
-Description: 
+Description:   
 Fetches CFTC Commitments of Traders reports
 AAII Sentiment Survey
 Saves raw data and cleaned AAII CSVs.
@@ -70,10 +70,10 @@ python fetch_sentiment_data.py
 
 ### generate_features.py
 
-Description:
-Loads price data, COT data, and sentiment data
-Computes moving averages, returns, volatility, net commercial positions, and bull-bear spreads
-Merges into a unified feature dataset
+Description:  
+Loads price data, COT data, and sentiment data  
+Computes moving averages, returns, volatility, net commercial positions, and bull-bear spreads  
+Merges into a unified feature dataset  
 
 Run:
 python generate_features.py
@@ -83,10 +83,10 @@ Output:
 
 ### train_model.py
 
-Description:
-Loads features
-Trains a Random Forest classifier to predict bullish/bearish signals
-Saves the trained model and feature names
+Description:  
+Loads features  
+Trains a Random Forest classifier to predict bullish/bearish signals  
+Saves the trained model and feature names  
 
 Run:
 python train_model.py
@@ -97,10 +97,10 @@ Feature artifact: ./models/feature_names.txt
 
 ### predict_signals.py
 
-Description:
-Loads the latest feature CSV and trained model
-Generates predicted signals and probabilities
-Saves signals to CSV
+Description:  
+Loads the latest feature CSV and trained model  
+Generates predicted signals and probabilities  
+Saves signals to CSV  
 
 Run:
 python predict_signals.py
@@ -110,21 +110,21 @@ Output:
 
 ### cli_trading_bot.py
 
-Description:
-Interactive command-line explorer
-Load signals and filter by:
-     Minimum prediction probability
-     Date ranges
-Inspect individual trade details
+Description:  
+Interactive command-line explorer  
+Load signals and filter by:  
+     Minimum prediction probability  
+     Date ranges  
+Inspect individual trade details  
 
 Run:
 python cli_trading_bot.py
 
 ### visualize_signals.py
 
-Description:
-Plot historical price charts with bullish/bearish signals overlayed
-Optionally filter by date range
+Description:  
+Plot historical price charts with bullish/bearish signals overlayed  
+Optionally filter by date range  
 
 Run:
 python visualize_signals.py --start YYYY-MM-DD --end YYYY-MM-DD
