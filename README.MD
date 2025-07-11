@@ -157,26 +157,27 @@ python visualize_signals.py --start 2024-01-01 --end 2025-07-10
 
 ## Future Improvements
 
-This MVP can be extended in several ways:
-
-✅ Integrate live data feeds (e.g., Interactive Brokers, Alpaca)
-✅ Support arbitrary tickers beyond SPY (ORCL, AAPL, etc.)
-✅ Add backtesting capability
-✅ Automate daily retraining and signal generation
-✅ Deploy as a web app or dashboard
-✅ Incorporate additional features (macro indicators, earnings, options data)
+This MVP can be extended in several ways:  
+  
+✅ Integrate live data feeds (e.g., Interactive Brokers, Alpaca)  
+✅ Support arbitrary tickers beyond SPY (ORCL, AAPL, etc.)  
+✅ Add backtesting capability  
+✅ Automate daily retraining and signal generation  
+✅ Deploy as a web app or dashboard  
+✅ Incorporate additional features (macro indicators, earnings, options data)  
 
 
 ## DISCLAIMER!!
 
-This project is for educational demonstration only.
-It should not be used for live trading or considered financial advice.
+This project is for educational demonstration only.  
+It should not be used for live trading or considered financial advice.  
 
 
-## License
-MIT License
+## License  
+
+MIT License  
 
 
-Enjoy exploring the data and let me know whats fucked up!
+Enjoy exploring the data and let me know whats fucked up!  
 --Mike
 
