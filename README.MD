@@ -226,7 +226,9 @@ You'll see:
 | `train_model.py`          | Train Random Forest model                                |
 | `predict_signals.py`      | Generate predictions and probabilities                   |
 | `cli_trading_bot.py`      | Interactive terminal exploration of signals              |
-| `visualize_signals.py`    | Generate visual candlestick charts with signals overlaid |
+| `visualize_signals.py`    | Generate visual candlestick charts with signals overlaid |  
+| `backtest.py`             | Evaluate performance of generated signals                |  
+| `run_all.py`              | automates teh end-to-end pipeline, running all scripts   |  
 
 
 ## Future Improvements
@@ -235,7 +237,6 @@ This MVP can be extended in several ways:
   
 ✅ Integrate live data feeds (e.g., Interactive Brokers, Alpaca)  
 ✅ Support arbitrary tickers beyond SPY (ORCL, AAPL, etc.)  
-✅ Add backtesting capability  
 ✅ Automate daily retraining and signal generation  
 ✅ Deploy as a web app or dashboard  
 ✅ Incorporate additional features (macro indicators, earnings, options data)  
