@@ -9,17 +9,29 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 import argparse
+import glob
 from datetime import datetime
 
 def main():
     parser = argparse.ArgumentParser(description="Visualize trading signals.")
-    parser.add_argument("--file", type=str, default="./signals/signals_20250710_224810.csv", help="CSV file with signals")
+    parser.add_argument("--file", type=str, help="CSV file with signals")
     parser.add_argument("--start", type=str, help="Start date (YYYY-MM-DD)")
     parser.add_argument("--end", type=str, help="End date (YYYY-MM-DD)")
     args = parser.parse_args()
 
-    print(f"Loading: {args.file}")
-    df = pd.read_csv(args.file)
+    # Automatically pick latest signals file if --file not specified
+    if args.file:
+        signals_file = args.file
+    else:
+        files = sorted(glob.glob("./signals/signals_*.csv"))
+        if not files:
+            print("❌ No signals CSV files found in ./signals/. Exiting.")
+            return
+        signals_file = files[-1]
+        print(f"Auto-selected most recent signals file: {signals_file}")
+
+    print(f"Loading: {signals_file}")
+    df = pd.read_csv(signals_file)
 
     # Convert 'date' to datetime
     df["date"] = pd.to_datetime(df["date"], errors="coerce")
