@@ -228,7 +228,7 @@ You'll see:
 | `cli_trading_bot.py`      | Interactive terminal exploration of signals              |
 | `visualize_signals.py`    | Generate visual candlestick charts with signals overlaid |  
 | `backtest.py`             | Evaluate performance of generated signals                |  
-| `run_all.py`              | automates teh end-to-end pipeline, running all scripts   |  
+| `run_all.py`              | automates the end-to-end pipeline, running all scripts   |  
 
 
 ## Future Improvements
